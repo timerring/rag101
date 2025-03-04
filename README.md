@@ -5,6 +5,8 @@
 
 This is a quick start guide essay for LangChain and RAG which mainly refers to the [Langchain chat with your data](https://learn.deeplearning.ai/courses/langchain-chat-with-your-data/lesson/snupv/introduction?courseName=langchain-chat-with-your-data) course.
 
+You can check the entire code in the [rag101 repository](https://github.com/timerring/rag101/).
+
 ### LangChain
 
 LangChain is an Open-source developer framework for building LLM applications.
@@ -72,6 +74,8 @@ Some useful lib:
 - web page: beautifulsoup4
 
 For more loaders, you can check the [official docs](https://python.langchain.com/api_reference/community/document_loaders.html#module-langchain_community.document_loaders).
+
+You can check the entire code [here](https://github.com/timerring/rag101/tree/main/loader).
 
 ### PDF
 
@@ -160,6 +164,8 @@ For more, check the [docs](https://python.langchain.com/api_reference/text_split
 
 ### Example CharacterTextSplitter and RecursiveCharacterTextSplitter
 
+You can check the entire code [here](https://github.com/timerring/rag101/blob/main/splitter/text_splitter.py).
+
 ```python
 from langchain.text_splitter import RecursiveCharacterTextSplitter, CharacterTextSplitter
 
@@ -219,6 +225,8 @@ Store every chunk in a vector store. When customer query, the query will be embe
 
 #### Embeddings
 
+You can check the entire code [here](https://github.com/timerring/rag101/blob/main/embeddings/zhipu.py).
+
 First, install the lib:
 
 The `chromadb` is a lightweight vector database.
@@ -250,6 +258,8 @@ print(embed.embed_documents(input_texts))
 ```
 
 #### Vector Stores
+
+You can check the entire code [here](https://github.com/timerring/rag101/blob/main/vectorstores/chroma.py).
 
 ```bash
 pip install langchain-chroma
@@ -348,7 +358,7 @@ The key parameter is the `lambda` which is the weight of the relevance and diver
 
 #### Practice
 
-We can adjust the code in `Vector stores` part to use the MMR method. The full code is in the `retrieval/mmr.py` file.
+We can adjust the code in `Vector stores` part to use the MMR method. The full code is in the [`retrieval/mmr.py` file](https://github.com/timerring/rag101/blob/main/retrieval/mmr.py).
 
 ```python
 # query the vector database with MMR
@@ -366,6 +376,8 @@ When our query is under some specific conditions, we can use the metadata to fil
 For example, the information such as page numbers, authors, timestamps, etc. These information can be used as filtering conditions during retrieval, thus improving the accuracy of the query.
 
 #### Practice
+
+You can check the entire code [here](https://github.com/timerring/rag101/blob/main/retrieval/metadata.py).
 
 Add new documents from another website, and then filter the results from the specific website.
 
@@ -561,6 +573,8 @@ This method is suitable for the most match answer rather than combine with all t
 
 ### Practice
 
+You can check the entire code [here](https://github.com/timerring/rag101/tree/main/question_answering).
+
 First, install the lib:
 
 ```bash
@@ -708,6 +722,8 @@ print(result['answer'])
 ```
 
 ### Practice
+
+You can check the entire code [here](https://github.com/timerring/rag101/blob/main/conversational_retrieval_chain/conversational_retrieval_chain.py).
 
 The best practice is as follows:
 
